@@ -80,7 +80,7 @@ thiserror = "1.0"
 uriparse = "0.6.3"
 wasm-bindgen = "0.2"
 
-[target.'cfg(target_arch = "wasm32")'.dependencies]
+[target.'cfg(all(target_arch = "wasm32", target_os = "unknown"))'.dependencies]
 js-sys = "0.3.55"
 
 [dev-dependencies]

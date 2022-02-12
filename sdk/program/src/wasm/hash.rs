@@ -1,5 +1,5 @@
 //! `Hash` Javascript interface
-#![cfg(target_arch = "wasm32")]
+#![cfg(all(target_arch = "wasm32", target_os = "unknown"))]
 #![allow(non_snake_case)]
 use {
     crate::{hash::*, wasm::display_to_jsvalue},
