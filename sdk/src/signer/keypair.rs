@@ -6,6 +6,7 @@ use {
         pubkey::Pubkey,
         signature::Signature,
         signer::{Signer, SignerError},
+        wasm_bindgen,
     },
     ed25519_dalek::Signer as DalekSigner,
     ed25519_dalek_bip32::Error as Bip32Error,
@@ -17,7 +18,6 @@ use {
         io::{Read, Write},
         path::Path,
     },
-    wasm_bindgen::prelude::*,
 };
 
 /// A vanilla Ed25519 key pair

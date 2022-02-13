@@ -56,9 +56,9 @@ pub mod system_program;
 pub mod sysvar;
 pub mod wasm;
 
-#[cfg(target_arch = "bpf")]
+#[cfg(not(all(target_arch = "wasm32", target_os = "unknown")))]
 pub use solana_sdk_macro::wasm_bindgen_stub as wasm_bindgen;
-#[cfg(not(target_arch = "bpf"))]
+#[cfg(all(target_arch = "wasm32", target_os = "unknown"))]
 pub use wasm_bindgen::prelude::wasm_bindgen;
 
 pub mod config {
